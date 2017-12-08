@@ -1,0 +1,21 @@
+---
+- name: Nginx to proxy port 80 to 8080
+  include: nginx_port_settings.yml
+
+- include: install_java_packages.yml
+
+- name: Include OS-Specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- include: jenkins_pkg_settings.yml
+  tags: Define Jenkins repo url settings
+
+- include: setup_Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Configure Jenkins init settings
+  include: settings.yml
+
+- include: jenkins_cli.yml
+
+- include: plugins.yml

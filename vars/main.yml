@@ -1,0 +1,7 @@
+---
+jenkins_dependencies_apt_packages:
+  - curl
+  - apt-transport-https
+
+__java_packages:
+  - openjdk-8-jdk
