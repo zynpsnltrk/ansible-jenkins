@@ -1,6 +1,0 @@
----
-- name: set_facts | Setting Jenkins Facts (Debian)
-  set_fact:
-    jenkins_config_file: "/etc/default/jenkins"
-    jenkins_java_options: "JAVA_ARGS"
-  when: ansible_os_family == "Debian"

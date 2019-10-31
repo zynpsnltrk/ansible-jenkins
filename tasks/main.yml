@@ -1,7 +1,4 @@
 ---
-- name: Nginx to proxy port 80 to 8080
-  include: nginx_port_settings.yml
-
 - include: install_java_packages.yml
 
 - name: Include OS-Specific variables

@@ -48,3 +48,4 @@
   with_items: "{{ jenkins_plugins }}"
   when: adminpasswordfile.stat.exists == True
   notify: restart jenkins
+  

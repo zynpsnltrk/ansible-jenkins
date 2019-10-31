@@ -8,5 +8,3 @@
     dest: "{{ jenkins_home }}/init.groovy.d/basic-security.groovy"
   register: jenkins_users_config
 
-- name: reload nginx
-  service: name=nginx state=reloaded
